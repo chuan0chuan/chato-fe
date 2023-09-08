@@ -34,6 +34,7 @@ import { ref } from 'vue'
 import { CircleStencil, Cropper } from 'vue-advanced-cropper'
 import 'vue-advanced-cropper/dist/style.css'
 const avatarUrlProp = defineProps(['avatarUrlProp'])
+
 const emit = defineEmits(['updateAvatar'])
 
 const baseURL = currentEnvConfig.uploadBaseURL
