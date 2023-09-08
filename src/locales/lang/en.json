@@ -1,8 +1,14 @@
 {
   "此功能用于创建一个新用户。他将拥有自己的独立知识库，并担任管理员。": "This function is used to create a new user. They will have their own independent knowledge base and serve as an administrator.",
+<<<<<<< HEAD
   "手机号": "Phone Number",
   "请输入手机号": "Please enter the phone number",
   "昵称": "Nickname",
+=======
+  "手机号": "Phone number",
+  "请输入手机号": "Please enter the phone number",
+  "昵称": "Username",
+>>>>>>> babefec (feat: i18n (#1))
   "请输入昵称": "Please enter a nickname",
   "确定": "Confirm",
   "已成功创建！": "Successfully created!",
@@ -67,9 +73,15 @@
   "审核通过": "Approved",
   "文件名": "Filename",
   "格式": "Format",
+<<<<<<< HEAD
   "大小/字符数": "Size/Number of characters",
   "字符": "Character",
   "创建时间": "Creation time",
+=======
+  "大小/字符数": "Characters",
+  "字符": "Character",
+  "创建时间": "Creation Time",
+>>>>>>> babefec (feat: i18n (#1))
   "操作": "Operate",
   "重试": "Retry",
   "编辑": "Edit",
@@ -91,9 +103,15 @@
   "您还没有录入文档，快去录入吧！": "No documents yet, go add some!",
   "录入文档": "Enter Documents",
   "完成录入后，AI 将快速完成素材浏览学习，并通过 5-10 分钟消化知识，随后可前往": "After completing the entry, the AI will quickly finish browsing the material and digest the knowledge in 5-10 minutes, and then you can go to",
+<<<<<<< HEAD
   "聊天演示": "Chat demonstration",
   "测试效果。": "to test the effects.",
   "批量操作": "Bulk operations",
+=======
+  "聊天演示": " Chat demonstration ",
+  "测试效果。": "to test the effects.",
+  "批量操作": "Bulk Operations",
+>>>>>>> babefec (feat: i18n (#1))
   " 删除": " Delete",
   "删除中...": "Deleting...",
   "重试中...": "Retrying...",
@@ -164,7 +182,11 @@
   "4、为了确保Chato服务的稳定性，独立域名配置成功后不可随意更换。": "4. To ensure the stability of Chato services, the independent domain name cannot be changed at will after successful configuration.",
   "5、绑定独立域名后，你需要保证域名及安全证书均在有效期内，若因域名或安全证书过期而导致Chato链接失效无法访问，责任由用户自行承担。": "5. After binding the independent domain name, you need to ensure that both the domain and the security certificate are valid. If the Chato link becomes inaccessible due to the expiration of the domain or security certificate, the user will bear the responsibility.",
   "6、绑定的独立域名，建议为二级及以下域名（如：Chato.cn），暂不支持中文域名（如：纳什智能.cn）": "6. For the bound independent domain name, it is recommended to be a second-level or lower domain (e.g., Chato.cn). Chinese domain names (e.g., NashIntelligence.cn) are not supported for now.",
+<<<<<<< HEAD
   "我已知情上述事项并同意绑定独立域名": "I am aware of the above matters and agree to bind the independent domain name.",
+=======
+  "我已知情上述事项并同意绑定独立域名": "I agree to the above terms and to bind to an independent domain.",
+>>>>>>> babefec (feat: i18n (#1))
   "下一步": "Next Step",
   "1.配置CNAME": "1. Configure CNAME",
   "腾讯云备案，请在域名服务网址上添加CNAME记录指向：lb-ni22fj7z-behsioq6t9mx2w15.clb.ap-shanghai.tencentclb.com": "For Tencent Cloud filing, please add a CNAME record on the domain service website pointing to: lb-ni22fj7z-behsioq6t9mx2w15.clb.ap-shanghai.tencentclb.com",
@@ -204,6 +226,7 @@
   "生成地址：": "Generated Address：",
   "重新配置": "Reconfigure",
   "查看配置教程": "View Configuration Tutorial",
+<<<<<<< HEAD
   "进入": "Enter",
   "「飞书开放平台」": "'Lark Open Platform'",
   "完成设置，填写以下信息": "Complete the settings and fill in the information below",
@@ -214,6 +237,18 @@
   "提交": "Submit",
   "请填写开发者ID": "Please fill in Developer ID",
   "请填写开发者密码": "Please fill in Developer Password",
+=======
+  "进入": "Enter ",
+  "「飞书开放平台」": "'Lark Open Platform'",
+  "完成设置，填写以下信息": " complete the settings and enter the information below",
+  "请填写APP ID": "Please enter the APP ID",
+  "请填写APP Secret": "Please enter the APP Secret",
+  "请填写Encrypt Key": "Please enter Encrypt Key",
+  "请填写Verification Token": "Please enter Verification Token",
+  "提交": "Submit",
+  "请填写开发者ID": "Please enter Developer ID",
+  "请填写开发者密码": "Please enter Developer Password",
+>>>>>>> babefec (feat: i18n (#1))
   "配置飞书群聊": "Configure Lark Group Chat",
   "提交中..": "Submitting..",
   "我的站点": "My Site",
@@ -230,7 +265,11 @@
   "请输入站点名称": "Please enter site name",
   "请输入站点名字": "Please enter site name",
   "查看填写示意图": "View Example Diagram",
+<<<<<<< HEAD
   "进入微信": "Enter WeChat",
+=======
+  "进入微信": "Enter WeChat ",
+>>>>>>> babefec (feat: i18n (#1))
   "「公众号后台」": "'Public Account Backend'",
   "请确保您的公众号已过微信认证": "Please ensure your public account has been verified by WeChat",
   "路径：内容与互动 > 自定义菜单 > 添加菜单": "Path: Content & Interaction > Custom Menu > Add Menu",
@@ -242,14 +281,24 @@
   "路径：内容与互动 > 自动回复 > 收到消息回复": "Path: Content & Interaction > Auto Reply > Reply to Received Messages",
   "创建自动回复": "Create Auto Reply",
   "选择自动回复类型，将以下链接或二维码，配置到回复里": "Choose auto-reply type and configure the link or QR code below into the reply",
+<<<<<<< HEAD
   "复制开发信息": "Copy Developer Information",
+=======
+  "复制开发信息": " to copy developer information",
+>>>>>>> babefec (feat: i18n (#1))
   "路径：设置与开发 > 基本配置，启用开发者密码后，复制并填写在下方": "Path: Settings & Development > Basic Configuration. After enabling the developer password, copy and fill in below",
   "未认证公众号暂不支持": "Unverified public accounts are not supported",
   "启用后，请在微信公众号后台复制IP白名单": "After enabling, please copy the IP whitelist in the WeChat public account backend",
   "开发者ID": "Developer ID",
+<<<<<<< HEAD
   "请填写AppID": "Please fill in AppID",
   "开发者密码": "Developer Password",
   "请填写AppSecret": "Please fill in AppSecret",
+=======
+  "请填写AppID": "Please enter AppID",
+  "开发者密码": "Developer Secret",
+  "请填写AppSecret": "Please enter AppSecret",
+>>>>>>> babefec (feat: i18n (#1))
   "禁用": "Disable",
   "服务器配置": "Server Configuration",
   "复制下方信息，在后台修改配置时粘贴": "Copy the information below and paste when modifying the configuration in the backend",
@@ -267,7 +316,11 @@
   "添加菜单": "Add Menu",
   "自动回复": "Auto Reply",
   "消息调用": "Message Invocation",
+<<<<<<< HEAD
   "以下发布平台即将开放，敬请期待": "The following publishing platforms will be available soon, stay tuned",
+=======
+  "以下发布平台即将开放，敬请期待": "The following publishing platforms will be available soon, stay tuned.",
+>>>>>>> babefec (feat: i18n (#1))
   "填写示意图": "Fill in Illustration",
   "抖音授权": "TikTok Authorization",
   "请前往「抖音」扫码授权": "Please go to 'TikTok' to scan for authorization",
@@ -284,9 +337,15 @@
   "解除失败": "Revocation Failed",
   "查看示例": "View Example",
   "URL链接": "URL Link",
+<<<<<<< HEAD
   "如需修改机器人在群里的名字，请前往": "If you need to change the robot's name in the group, please go to",
   "「形象」": "'Image'",
   "进行编辑机器人昵称": "Edit the robot's nickname",
+=======
+  "如需修改机器人在群里的名字，请前往": "If you need to change the robot's name in the group, click",
+  "「形象」": " 'Image' ",
+  "进行编辑机器人昵称": " to edit the robot's nickname",
+>>>>>>> babefec (feat: i18n (#1))
   " 首位进群人员为管理员 ": " The first person to join the group is the administrator ",
   "添加机器人为好友": "Add robot as a friend",
   "群成员数": "Group member count",
@@ -299,7 +358,11 @@
   "用户须知": "User Instructions",
   "1.不能与机器人单独聊天": "1. Can't chat with the robot individually",
   "2.机器人只能在加入的第一个群里生效": "2. The robot can only work in the first group it joins",
+<<<<<<< HEAD
   "3.@机器人提问，机器人即可自动回复": "3. @ the robot to ask questions, and the robot will reply automatically",
+=======
+  "3.{mention}机器人提问，机器人即可自动回复": "3. {mention} the robot to ask questions, and the robot will reply automatically",
+>>>>>>> babefec (feat: i18n (#1))
   "完成": "Complete",
   "群聊名称": "Group Chat Name",
   "请输入群聊名称": "Please enter the group chat name",
@@ -309,10 +372,17 @@
   "群高级设置": "Group Advanced Settings",
   "回复方式": "Reply Mode",
   "请选择回复方式": "Please Select Reply Mode",
+<<<<<<< HEAD
   "仅@回复": "Reply only with @",
   "@或者提及昵称回复": "@ or Mention Nickname to Reply",
   "新人进群@Ta打招呼": "Greet newcomers with @",
   "请输入新人进群@Ta打招呼欢迎语": "Please enter the greeting for @ newcomers",
+=======
+  "仅{'@'}回复": "Reply only with {'@'}",
+  "{'@'}或者提及昵称回复": "{'@'} or Mention Nickname to Reply",
+  "新人进群{'@'}Ta打招呼": "Greet newcomers with {'@'}",
+  "请输入新人进群{'@'}Ta打招呼欢迎语": "Please enter the greeting for {'@'} newcomers",
+>>>>>>> babefec (feat: i18n (#1))
   "上传群二维码": "Upload Group QR Code",
   "请上传群二维码": "Please Upload Group QR Code",
   "创建群聊": "Create Group Chat",
@@ -325,7 +395,11 @@
   "群机器人信息：": "Group Robot Information:",
   "如需修改机器人名字请": "If you need to change the robot's name, please",
   "前往形象": "go to profile",
+<<<<<<< HEAD
   "（头像暂不支持修改）": "(Profile picture cannot be changed)",
+=======
+  "（群头像暂不支持修改）": "(Profile picture cannot be changed)",
+>>>>>>> babefec (feat: i18n (#1))
   "激活秘钥：": "Activation Key:",
   "机器人二维码：": "Robot QR Code:",
   "机器人二维码": "Robot QR Code",
@@ -340,6 +414,7 @@
   "已生成": "Generated",
   "可前往": "You can go to",
   "中查看二维码": "to view the QR code",
+<<<<<<< HEAD
   "查看示意图": "View Schematic Diagram",
   "配置微信客服": "WeChat Customer Service",
   "企业ID": "Company ID",
@@ -352,6 +427,20 @@
   "路径：开发配置—点击“开始使用”—填写信息—点击“完成”": "Path: Development Configuration - Click “Start Using” - Fill in the Information - Click “Complete”",
   "请填写开发者Secret": "Please fill in the Developer Secret",
   "第三步：复制Secret信息，并填入下面输入框": "Step 3: Copy the Secret information and fill it in the box below",
+=======
+  "查看示意图": "View Schematic",
+  "配置微信客服": "WeChat Customer Service",
+  "企业ID": "Company ID",
+  "确认，并下一步": "Next",
+  "第一步： 进入微信": "Step 1: Enter WeChat",
+  "「微信客服后台」": "「WeChat Customer Service Backend」",
+  "，复制“企业ID”信息": "to copy 'Company ID'",
+  "将企业ID信息，粘贴在下方输入框": "Paste the Company ID in the box below",
+  "第二步：复制以下信息，并填入微信后台": "Step 2: Copy the information below and fill it in the WeChat backend",
+  "路径：开发配置—点击“开始使用”—填写信息—点击“完成”": "Path: Development Configuration - Click “Start Using” - Enter the Information - Click “Complete”",
+  "请填写开发者Secret": "Please enter the Developer Secret",
+  "第三步：复制Secret信息，并填入下面输入框": "Step 3: Copy the Secret and fill it in the box below",
+>>>>>>> babefec (feat: i18n (#1))
   "用量限制": "Usage Limit",
   "限制将作用于外部用户，同一设备同一浏览器访问时识别为一名用户，成员在后台训练时的对话量不在限制范围内；超出后的回复不计入电力值。": "The limit applies to external users. When accessed by the same device and browser, it's recognized as one user. Member's conversations during backend training are not included in the limit; over-limit replies don't count towards electricity value.",
   "按使用频率": "By Usage Frequency",
@@ -364,10 +453,17 @@
   "对话广告": "Conversation Ads",
   "广告将按照以下频率和文案展示给用户；广告不计入电力值。": "Ads will be displayed to users at the following frequency and copy; ads are not included in the electricity value.",
   "每个用户每隔": "Each user, every",
+<<<<<<< HEAD
   "条，展示一次广告。": "messages, displays an ad once.",
   "文档来源": "Document Source",
   "关闭时仅在后台训练中可查看来源文档，打开后所有人在与机器人对话时都可查看": "When closed, only in the backend training can you view the source document. When opened, everyone can view it while conversing with the robot.",
   "当回答引用了文档后，可查看回答对应的文档来源。": "When a response references a document, you can view the source of the document corresponding to the answer.",
+=======
+  "条，展示一次广告": "messages, displays an ad once.",
+  "文档来源": "Document Source",
+  "关闭时仅在后台训练中可查看来源文档，打开后所有人在与机器人对话时都可查看": "When closed, only in the backend training can you view the source document. When opened, everyone can view it while conversing with the robot.",
+  "当回答引用了文档后，可查看回答对应的文档来源。": "When an answer cites a document, you can view its source.",
+>>>>>>> babefec (feat: i18n (#1))
   "回答修正": "Answer Correction",
   "关闭时仅在后台训练中可修正，打开后在分享链接页面，所有人在与机器人对话时都可修正": "When closed, corrections can only be made during backend training. When opened, on the shared link page, everyone can make corrections while conversing with the robot.",
   "当你的用户对话时，提供可修正的功能。": "Provide a correction feature when your users converse.",
@@ -387,7 +483,11 @@
   "确认{action}": "Confirm{action}",
   "创建群聊确认": "Create Group Chat Confirmation",
   "保存中...": "Saving...",
+<<<<<<< HEAD
   "@机器人提问，机器人即可自动回复，请前往群聊体验。": "@Ask the robot, the robot will automatically reply. Please go to the group chat to experience it.",
+=======
+  "{mention}机器人提问，机器人即可自动回复，请前往群聊体验。": "{mention}Ask the robot, the robot will automatically reply. Please go to the group chat to experience it.",
+>>>>>>> babefec (feat: i18n (#1))
   "创建": "Create",
   "{slot1}成功": "{slot1} Successful",
   "钉钉": "DingTalk",
@@ -409,16 +509,27 @@
   "飞书": "Lark",
   "在飞书群聊中提供机器人服务": "Provide robot services in Lark group chat",
   "配置飞书": "Configure Lark",
+<<<<<<< HEAD
   "微信客服": "WeChat Customer Service",
   "通过配置微信客服，实现与机器人1V1聊天": "By configuring WeChat customer service, achieve 1V1 chat with the robot",
   "配置文档": "Configuration Document",
   "配置完成后，机器人可自动回复私信": "After configuration is complete, the robot can automatically reply to private messages",
+=======
+  "微信客服": "Customer Service",
+  "通过配置微信客服，实现与机器人1V1聊天": "Configure WeChat support to chat 1V1 with the bot",
+  "配置文档": "Documents",
+  "配置完成后，机器人可自动回复私信": "Bot auto-replies to DMs after setup",
+>>>>>>> babefec (feat: i18n (#1))
   "扫码授权": "Scan Code Authorization",
   "导出全部": "Export All",
   "全部来源": "All Sources",
   "用户数据": "User Data",
   "训练数据": "Training Data",
+<<<<<<< HEAD
   "全部评价": "All Reviews",
+=======
+  "全部评价": "All Comments",
+>>>>>>> babefec (feat: i18n (#1))
   "无评价": "No Reviews",
   "赞": "Like",
   "踩": "Dislike",
@@ -437,7 +548,11 @@
   "昨日": "Yesterday",
   "近7天": "Past 7 days",
   "近一个月": "Past month",
+<<<<<<< HEAD
   "近半年": "Past six months",
+=======
+  "近半年": "Past 6 months",
+>>>>>>> babefec (feat: i18n (#1))
   "近一年": "Past year",
   "抱歉，未勾选数据，无法导出。请先勾选数据再进行导出操作。": "Sorry, no data selected, unable to export. Please select data before exporting.",
   "全部对话数": "Total Conversations",
@@ -475,7 +590,11 @@
   "基本信息": "Basic Information",
   "简介": "Introduction",
   "对话元素": "Conversation Elements",
+<<<<<<< HEAD
   "欢迎语": "Welcome Message",
+=======
+  "欢迎语": "Greeting",
+>>>>>>> babefec (feat: i18n (#1))
   "打开聊天窗口后会主动发送，添加双井号可添加提问示例，例如：#帮我写一则关于xxx的文案#，此类消息不消耗电力值。": "Upon opening the chat window, a proactive message will be sent. Add double hash symbols to include question examples, e.g., #Help me write a copy about xxx#. Such messages do not consume energy points.",
   "菜单栏": "Menu Bar",
   "用户点击菜单后，将回复对应内容。此类消息不消耗电力值。": "Upon user's click on the menu, the corresponding content will be replied. Such messages do not consume energy points.",
@@ -516,7 +635,11 @@
   "预约成功": "Appointment Successful",
   "免费体验": "Free Trial",
   "只需上传学习素材或添加提示语，": "Just upload learning materials or add prompts,",
+<<<<<<< HEAD
   "即可获得独特个性和超强能力的专属助理机器人。": "to get a dedicated assistant robot with unique personality and superior capabilities.",
+=======
+  "即可获得独特个性和超强能力的专属助理机器人。": " to get a dedicated assistant robot with unique personality and superior capabilities.",
+>>>>>>> babefec (feat: i18n (#1))
   "Chato 帮助企业先人一步运用 AI 理念，": "Chato helps enterprises take the lead in adopting AI concepts,",
   "释放难以想象的产出与价值。": "releasing unimaginable output and value.",
   "20S快速创建机器人": "Create a Robot",
@@ -525,8 +648,13 @@
   "AI 驱动的": "AI Driven",
   "基于企业私有数据的": "Based on corporate data",
   "AI 数字员工": "AI Digital Employees",
+<<<<<<< HEAD
   "使用企业数据打造专属大模型": "Building large models with corporate data",
   "技术成品降低，提高效率": "Reduce technical costs, improve efficiency",
+=======
+  "使用企业数据打造专属大模型": "Build large models by corporate data",
+  "技术成品降低，提高效率": "Reduce tech costs, improve efficiency",
+>>>>>>> babefec (feat: i18n (#1))
   "嵌入到各个地方": "Embed everywhere",
   "了解更多": "Learn more",
   "Chato 如何实现": "How Chato achieves ",
@@ -535,6 +663,7 @@
   "定制独特个性和超强能力的专属机器人。": " customize a unique and powerful exclusive robot.",
   " 角色设定 ": " Role Setting ",
   "给机器人设定一个基础角色，可以是": "Assign a basic role to the robot, it can be",
+<<<<<<< HEAD
   "客服、销售、培训师、营销人员、行业专家": "Customer service, sales, trainer, marketer, industry expert",
   "等，让机器人更符合您的业务形象。": "etc., making the robot better align with your business image.",
   " 上传文档并建立知识库 ": " Upload documents and build a knowledge base ",
@@ -561,6 +690,34 @@
   "立即体验": "Get Started",
   "Chato 优势": "Chato Advantage",
   "Chato 不需要具备代码知识，预设海量模版，轻松上手使用。": "Chato does not require coding knowledge, comes with a large number of preset templates, is easy to use.",
+=======
+  "客服、销售、培训师、营销人员、行业专家": "customer service, sales, trainer, marketer, ",
+  "等，让机器人更符合您的业务形象。": "etc., making the robot better align with your business image.",
+  " 上传文档并建立知识库 ": " Build a knowledge base ",
+  "通过录入文档或问答来创建知识库，": "Input documents or engage in Q&A to create a comprehensive knowledge base.",
+  "让机器人学习，根据机器人训练情况，": "Let the robot learn; based on its training, ",
+  "可随时删除或替换文档。": "documents can be modified anytime.",
+  " 为答案提供来源 ": " Provide sources",
+  "发布前支持演示验收，": "Support demo acceptance before release,",
+  "机器人的答案可附带文档来源，": "The robot's answers can include sources,",
+  "回答有理有据，训练效果满意后再发布。": "Answers are reasoned, publish only after satisfactory training results.",
+  " 多终端发布渠道 ": "Multi-channel publish",
+  "满足多种业务场景，为您服务各渠道客户。": "Serve varied business needs across all channels,",
+  "包括网页、微信群、JS 嵌入网页、接入API， ": "includes web, WeChat, JS embeds, API access,",
+  "更多发布形式持续升级中。": "Continuously updating release forms.",
+  " 帮您服务客户 ": "Serving your customers",
+  "支持自定义互动界面，": "Supports custom interactive interface,",
+  "作为您公司业务的专业形象，": "Serving as the professional image of your company's business,",
+  "为您 7*24 小时服务客户。": "Serving your customers 24*7.",
+  " 查看数据 ": " View Data ",
+  "可查看使用数据，": "View usage data,",
+  "掌握机器人知识服务效果。": "to understand robot service effectiveness.",
+  "根据数据报表，可进一步优化机器人，": "Optimize the robot based on reports,",
+  "让它更准确的回答业务知识。": "to enhance accuracy in business answers.",
+  "立即体验": "Get Started",
+  "Chato 优势": "Chato Advantage",
+  "Chato 不需要具备代码知识，预设海量模版，轻松上手使用。": "Chato does not require coding knowledge, comes with a large number of preset templates, and is easy to use.",
+>>>>>>> babefec (feat: i18n (#1))
   "进一步了解": "Learn More",
   "企业服务": "Corporate Services",
   "Chato 致力于为客户提供最贴心的服务和支持": "Chato is committed to providing the most intimate services and support for customers",
@@ -575,12 +732,21 @@
   "我们的产品不仅可以为用户提供高效的服务，还可以让用户放心地使用我们的产品，享受更加安全和可靠的体验。": "Our product not only provides efficient service for users but also lets them use our product with confidence, enjoying a more secure and reliable experience.",
   "常见": "Common",
   "问题": " Questions",
+<<<<<<< HEAD
   "Chato的接口是否开放？可以与企业其他系统集成？": "Is Chato's interface open? Can it be integrated with other corporate systems?",
   "是的，Chato 提供开放的 API，企业可以轻松将 Chato集成到已有系统当中，实现与企业业务流程的深度集成。": "Yes, Chato provides an open API, allowing businesses to easily integrate Chato into existing systems, achieving deep integration with business processes.",
   "我不上传任何文档，它会回答吗？": "If I don't upload any documents, will it respond?",
   "您的机器人仍可以回答常规问题，成为一个助理机器人，但是它不了解您的业务哦。": "Your robot can still answer general questions, acting as an assistant robot, but it won't understand your business.",
   "我可以让他不知道就不要回答吗？": "Can I make it not answer if it doesn't know?",
   "在设定页面，设置回答的多样性。多样性数值为：0-1，其中 1是最多样。如果您想让他不知道就不要回答，您可以设置多样性为 0。": "On the settings page, adjust the diversity of answers. Diversity values range from 0-1, with 1 being the most diverse. If you want it not to answer when unsure, you can set the diversity to 0.",
+=======
+  "Chato的接口是否开放？可以与企业其他系统集成？": "Is Chato's API open for integration? Can it sync with other business systems?",
+  "是的，Chato 提供开放的 API，企业可以轻松将 Chato集成到已有系统当中，实现与企业业务流程的深度集成。": "Absolutely, Chato offers an open API. This allows businesses to effortlessly incorporate Chato into their current systems, ensuring a seamless blend with their operations.",
+  "我不上传任何文档，它会回答吗？": "If I don't upload any documents, will it still reply?",
+  "您的机器人仍可以回答常规问题，成为一个助理机器人，但是它不了解您的业务哦。": "Your bot can still tackle general queries, functioning as an assistant. However, it won't have insights about your specific business.",
+  "我可以让他不知道就不要回答吗？": "Can I set it to refrain from answering when uncertain?",
+  "在设定页面，设置回答的多样性。多样性数值为：0-1，其中 1是最多样。如果您想让他不知道就不要回答，您可以设置多样性为 0。": "On the configuration page, you can modify the response diversity. The range is between 0-1, with 1 being the most varied. To have it stay silent when unsure, set the diversity to 0.",
+>>>>>>> babefec (feat: i18n (#1))
   "快速定制您的机器人": "Quickly Customize Your Robot",
   "体验 Chato": "Try Chato",
   "云南纳什智能科技有限公司": "Yunnan Nash Intelligent Technology Co., Ltd.",
@@ -599,7 +765,11 @@
   "应用场景广泛": "Widely Applicable",
   "使用方便快捷": "Convenient",
   "提供训练服务": "Training Services",
+<<<<<<< HEAD
   "基于企业或超级个体的知识库训练自建模型，打造专属 AI 机器人，比如": "Custom AI robot built on corporate or super-individual knowledge bases, such as ",
+=======
+  "基于企业或超级个体的知识库训练自建模型，打造专属 AI 机器人，比如": "AI robot built on specialized knowledge bases, such as ",
+>>>>>>> babefec (feat: i18n (#1))
   "知识库、内容、LOGO、URL": "knowledgebase、content、LOGO、URL",
   "等等。": "",
   "API、JS、H5 等": "API, JS, H5, etc. for ",
@@ -628,7 +798,11 @@
   "我的 Bots": "My Bots",
   "创建机器人": "Create Robot",
   "模板创建": "Template Creation",
+<<<<<<< HEAD
   "AI 一键创建": "AI Quickly Creation",
+=======
+  "AI 一键创建": "AI Creation",
+>>>>>>> babefec (feat: i18n (#1))
   "快速创建一个属于你的机器人吧！": "Quickly create a robot that belongs to you!",
   "机器人分类": "Robot Classification",
   "请选择机器人分类": "Please select a robot classification",
@@ -693,8 +867,13 @@
   "清空历史消息": "Clear History Messages",
   "发送": "Send",
   "目前为训练演示视角， 如需用户视角": "Currently in training demo view, if user view is needed",
+<<<<<<< HEAD
   "请点击此处前往": "Please click here to proceed",
   "输入问题，换行可通过shift+回车": "Enter your question, use shift+enter for a new line",
+=======
+  "请点击此处前往": ", please click here to proceed.",
+  "输入问题，换行可通过shift+回车": "Enter your question, use Shift+Enter for a new line",
+>>>>>>> babefec (feat: i18n (#1))
   "请输入问题": "Please enter a question",
   "问题过长！": "Question is too long!",
   "终止失败：终止触发时，当前消息是预期以外的消息类型": "Termination failed: When termination was triggered, the current message was not of the expected type",
@@ -757,7 +936,11 @@
   "预约演示": "Schedule a Demo",
   "返回": "Back",
   "基于知识库轻松定制": "Easily Customize Based on Knowledge Base",
+<<<<<<< HEAD
   "扫码关注": "Scan to Follow",
+=======
+  "扫码关注": "Follow WeChat",
+>>>>>>> babefec (feat: i18n (#1))
   "Chato 为你提供定制化的产品解决方案，我们致力于用 AI 来提升业务的效率": "Chato offers tailored product solutions for you, and we're dedicated to using AI to boost business efficiency.",
   "微信联系": "WeChat",
   "可通过网页、微信群、JS 嵌入、API 等多渠道分享": "Easily share through webpages, WeChat groups, JS embedding, API, and more channels",
@@ -847,7 +1030,11 @@
   "一键 AI 优化": "AI Optimization",
   "正在思考中...": "Thinking...",
   "正在回答中...": "Answering...",
+<<<<<<< HEAD
   "退出登录": "Log out",
+=======
+  "退出登录": "Log Out",
+>>>>>>> babefec (feat: i18n (#1))
   "上传图片": "Upload Image",
   "文本内容不能超过 {limitText} 字符！": "Text content cannot exceed {limitText} characters!",
   "文档：来源于": "Document: Sourced from",
@@ -911,7 +1098,11 @@
   "以做口碑的拓客方式过于传统，想做私域群，但社群需要 24 小时处理群里的问题，费时费力": "The method of reputation-building for expanding customers is too traditional. They want to create private domain groups, but managing the group's questions 24 hours a day is time-consuming and labor-intensive.",
   "设计门店营销活动没有思路，活动文案和推销话术产出效率低": "Designing store marketing activities lacks ideas, and the efficiency of generating activity copy and sales scripts is low.",
   "创建并训练咖啡师推荐师机器人，帮助客户进行产品推荐和解答疑问，提升购买体验和销售效果": "Create and train a barista recommendation robot to assist customers with product recommendations and answering questions, enhancing the buying experience and sales effectiveness.",
+<<<<<<< HEAD
   "通过引入群聊机器人维护社群，24 小时处理群内问题，提高社群运营效率": "By introducing a group chat robot to maintain the community and handling group issues 24/7, community operations efficiency is improved.",
+=======
+  "通过引入群聊机器人维护社群，24 小时处理群内问题，提高社群运营效率": "Introducing chatbot for group chats to handle inquiries, enhancing community management efficiency.",
+>>>>>>> babefec (feat: i18n (#1))
   "利用机器人提供营销方案，设计门店营销活动并提供活动文案和推销话术，提高活动产出效率": "Utilize robots to provide marketing plans, design store marketing activities, and offer activity copy and sales scripts, improving activity output efficiency.",
   "医疗美容": "Medical Aesthetics",
   "米娜美业": "Mina Beauty",
@@ -935,9 +1126,15 @@
   "以“红娘”为代表的服务人员业务水平参差不齐，并且人员成本高昂": "Service personnel, represented by 'matchmakers,' have uneven business levels, and personnel costs are high.",
   "利用 AI 绘图的能力，既满足了年轻人的好奇心，又有效地调研客户信息": "Utilizing AI's drawing ability satisfies the curiosity of young people while effectively surveying customer information.",
   "以 AI 为卖点吸引客户，降低获客成本；同时，利用 AI 在线承接客户并进行精准引导，提高了获客的精准度": "Using AI as a selling point attracts customers and lowers customer acquisition costs. Meanwhile, utilizing AI to engage customers online and provide precise guidance increases customer acquisition accuracy.",
+<<<<<<< HEAD
   "7x24 小时在线增加了服务时长；从 1 对 1 转变为 1 对多，增加了客户服务数量；通过 AI 接待客户替代传统红娘，加速了沟通并提升了服务质量。每位红娘的服务能力可达到原业绩的 5-10 倍。": "Being available 24/7 online increases service hours. Transitioning from 1-to-1 to 1-to-many increases the number of customer services. Replacing traditional matchmakers with AI accelerates communication, enhances service quality, and each matchmaker's service ability can reach 5-10 times the original performance.",
   "分类信息": "Classified Information",
   "百姓网": "Baixing Website",
+=======
+  "7x24 小时在线增加了服务时长；从 1 对 1 转变为 1 对多，增加了客户服务数量；通过 AI 接待客户替代传统红娘，加速了沟通并提升了服务质量。每位红娘的服务能力可达到原业绩的 5-10 倍。": "Being available 24*7 online increases service hours. Transitioning from 1-to-1 to 1-to-many increases the number of customer services. Replacing traditional matchmakers with AI accelerates communication, enhances service quality, and each matchmaker's service ability can reach 5-10 times the original performance.",
+  "分类信息": "Classified Information",
+  "百姓网": "Baixing",
+>>>>>>> babefec (feat: i18n (#1))
   "门户网站": "Portal Website",
   "互联网": "Internet",
   "业务体量：国内领先的分类信息生态服务商": "Business Scale: Leading domestic classified information ecosystem service provider",
@@ -946,7 +1143,11 @@
   "平台型互联网公司长期需要线上客服服务于 B 端和 C 端，提供售前和售后咨询事宜": "Platform-based internet companies require long-term online customer service for both B2B and B2C sides, providing pre-sales and after-sales consultations.",
   "以往的线上机器人客服人工依赖高，需要长期 Q&A 语料库搭建，经历较长期的运营": "Previous online robot customer service heavily relied on human intervention and required the construction of long-term Q&A databases, undergoing extended periods of operation.",
   "机器人客服回答不够灵活，整体回复率仅有 60%，约 40% 售前问题仍然依赖人工客服解决": "Robot customer service responses were not flexible enough, resulting in an overall response rate of only 60%, with about 40% of pre-sales questions still relying on human customer service.",
+<<<<<<< HEAD
   "引入 7x24 小时随时服务的机器人客服，提升在线服务时长，提高用户体验": "Introducing 24/7 robot customer service for instant service enhances online service availability and improves user experience.",
+=======
+  "引入 7x24 小时随时服务的机器人客服，提升在线服务时长，提高用户体验": "Introduce round-the-clock robot customer service to extend online service hours and enhance user experience.",
+>>>>>>> babefec (feat: i18n (#1))
   "利用百姓网积累多年的 Q&A 语料库训练机器人客服，保证其根据业务自动处理用户问题": "Using Baixing Net's accumulated years of Q&A database to train robot customer service ensures automatic handling of user queries based on the business.",
   "与传统机器人客服相比，回答灵活性大大提升，整体回复率提高到了 90%，售前问题的人工依赖率降低到了 10%。大幅缩减了人工客服的用人成本": "Compared to traditional robot customer service, flexibility in responses has significantly improved, with an overall response rate increasing to 90%, and the manual dependency rate for pre-sales questions reduced to 10%. This greatly reduces the cost of human customer service.",
   "会展沙龙": "Exhibition Salon",
@@ -970,7 +1171,11 @@
   "我们致力于为您提供定制化的产品解决方案，用 AI 来提升业务的效率": "We are committed to providing you with customized product solutions and using AI to improve business efficiency",
   "行业案例：{msg}": "Case: {msg}",
   "立即体验 Chato": "Try Chato",
+<<<<<<< HEAD
   "收集表单明细": "Form details",
+=======
+  "收集表单明细": "Form Details",
+>>>>>>> babefec (feat: i18n (#1))
   "例如：制定专业的苹果手机营销计划和策略": "For example: Develop professional Apple mobile phone marketing strategies",
   "关注公众号": "Follow WeChat",
   "渠道合作": "Cooperate",
@@ -1031,5 +1236,42 @@
   "预期希望解决的问题": "Expected problems to be solved",
   "职位": "Jobs",
   "上一步": "Previous Step",
+<<<<<<< HEAD
   "请填写您的行业": "请填写您的行业"
+=======
+  "Default Model (推荐)": "Default (Recommended) ",
+  "20 秒": "20s",
+  "文心一言": "ERNIE Bot",
+  "MiniMax": "MiniMax",
+  "ChatGLM": "ChatGLM",
+  "消耗 {power} 个电力值": "Consume {power} power units",
+  "升级": "Upgrade",
+  "后可使用": "",
+  "Advanced Model": "Advanced Model",
+  "全部状态": "All",
+  "待处理": "Pending",
+  "正在解析": "Parsing",
+  "学习中": "Learning",
+  "学习完成": "Learned",
+  "学习失败": "Learning Failed",
+  "网络异常，请检查后重试": "Network error, please check and try again.",
+  "请求错误": "Request Error",
+  "填写时间": "Fill in Time",
+  "用户ID": "User ID",
+  "回调URL": "Callback URL",
+  "Token": "Token",
+  "EncodingAESKey": "EncodingAESKey",
+  "Secret": "Secret",
+  "点击「确认」后，群聊额度会扣除。创建新群后，群主为系统分配的建群机器人，且不可转让。": "After clicking 'Confirm', chat quota deducts. A system-assigned bot is given to the group owner, non-transferable.",
+  "点击「确认」后，机器人会自动进入群聊中，群聊额度会扣除。创建新群后，群主为系统分配的建群机器人，且不可转让。": "Click 'Confirm', bot joins and quota deducts. A system bot is provided to the owner, non-transferable.",
+  "添加机器人为好友，机器人会自动通过，群聊额度会扣除。创建新群后，群主为系统分配的建群机器人，且不可转让。": "Add the bot, it auto-accepts, quota deducts. On group creation, an owner gets a system bot, non-transferable.",
+  " 手机号": "Tel",
+  "保存": "Save",
+  "品牌版": "Brand Version",
+  "旗舰版": "Flagship Version",
+  "高级定制版": "Premium Customized Version",
+  "语音": "Voice",
+  "拓展": "Extension",
+  "翻译": "Translation"
+>>>>>>> babefec (feat: i18n (#1))
 }
