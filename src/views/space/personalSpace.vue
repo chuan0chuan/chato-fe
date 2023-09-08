@@ -6,7 +6,7 @@
           <div class="default-avatar" v-if="!userInfo?.org?.avatar && !isRemove">
             <el-avatar :size="48">空间</el-avatar>
           </div>
-          <UploadToCropper :value="userInfo.org.avatar" @updateAvatar="(v) => handleChange(v)" />
+          <UploadToCropper :avatar="userInfo.org.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
         </div>
         <span class="mx-4 text-sm" v-if="!isEdit">{{ name }}</span>
         <HansInputLimit
@@ -179,7 +179,7 @@ const handleEdit = () => {
   isEdit.value = true
 }
 
-const handleChange = (value: any) => {
+const onAvatarUpdate = (value: any) => {
   avatar.value = value
   handleUpdateOrgInfo()
 }

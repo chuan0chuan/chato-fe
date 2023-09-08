@@ -11,9 +11,9 @@
         <FLTitle>基本信息</FLTitle>
         <div class="flex items-center justify-between gap-4 mb-9">
           <UploadToCropper
-            :avatarUrlProp="settingForm.domain.avatar"
-            @updateAvatar="(v) => handleImgChange(v)"
-          />
+            :avatar="settingForm.domain.avatar"
+            @updateAvatar="(v) => onAvatarUpdate(v)"
+          ></UploadToCropper>
           <div class="flex-1 -ml-[5px]">
             <HansInputLimit
               v-model:value="settingForm.domain.name"
@@ -271,7 +271,7 @@ const previewBotInfo = computed(() => {
 const generateWelcomeBtnRef = ref()
 const generateIntroBtnRef = ref()
 
-const handleImgChange = (newAvatarUrl) => {
+const onAvatarUpdate = (newAvatarUrl) => {
   settingForm.domain.avatar = newAvatarUrl
 }
 
@@ -326,7 +326,7 @@ const onSave = async () => {
   try {
     console.dir(settingForm.domain)
     const saveParams = { ...toRaw(settingForm) }
-    console.log('After to Raw!!!!!!' + saveParams.domain.avatar)
+    console.log('After to Raw!!!!!! blog need to be URL' + saveParams.domain.avatar)
     if (!saveParams.domain.avatar) {
       saveParams.domain.avatar = DefaultDomainAvatar
     }

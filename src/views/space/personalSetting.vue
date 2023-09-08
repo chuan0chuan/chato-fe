@@ -22,7 +22,7 @@
           >
             <el-avatar :size="48" class="bg-[#7C5CFC]">{{ userInfo.nickname[0] }}</el-avatar>
           </div>
-          <UploadToCropper :value="settingForm.avatar" @updateAvatar="(v) => handleChange(v)" />
+          <UploadToCropper :avatar="settingForm.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
         </div>
       </el-form-item>
       <el-form-item label="昵称" prop="nickname">
@@ -107,7 +107,7 @@ const handleReplace = () => {
   isRemove.value = true
 }
 
-const handleChange = (value: any) => {
+const onAvatarUpdate = (value: string) => {
   settingForm.avatar = value
 }
 
