@@ -6,7 +6,7 @@
           <div class="default-avatar" v-if="!userInfo?.org?.avatar && !isRemove">
             <el-avatar :size="48">空间</el-avatar>
           </div>
-          <UploadToCropper :avatar="userInfo.org.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
+          <UploadToCrop :avatar="userInfo.org.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
         </div>
         <span class="mx-4 text-sm" v-if="!isEdit">{{ name }}</span>
         <HansInputLimit
@@ -112,8 +112,8 @@
 <script setup lang="ts">
 import { removeSpaceMember, updateOrgSpaceInfo, updateSpaceMemberRole } from '@/api/space'
 import UserAvatar from '@/components/Avatar/UserAvatar.vue'
-import UploadToCropper from '@/components/ImgChange/UploadToCropper.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
+import UploadToCrop from '@/components/UploadToCrop/index.vue'
 import useSpace from '@/composables/useSpace'
 import useSpaceRights from '@/composables/useSpaceRights'
 import type { ESettingSpaceRole } from '@/enum/space'

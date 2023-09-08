@@ -22,7 +22,7 @@
           >
             <el-avatar :size="48" class="bg-[#7C5CFC]">{{ userInfo.nickname[0] }}</el-avatar>
           </div>
-          <UploadToCropper :avatar="settingForm.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
+          <UploadToCrop :avatar="settingForm.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
         </div>
       </el-form-item>
       <el-form-item label="昵称" prop="nickname">
@@ -50,9 +50,9 @@
 
 <script setup lang="ts">
 import { updateOrgUserInfo } from '@/api/space'
-import UploadToCropper from '@/components/ImgChange/UploadToCropper.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import Topbar from '@/components/Topbar/index.vue'
+import UploadToCrop from '@/components/UploadToCrop/index.vue'
 import { useBase } from '@/stores/base'
 import { getStringWidth } from '@/utils/string'
 import type { FormInstance, FormRules } from 'element-plus'

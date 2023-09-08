@@ -10,10 +10,10 @@
       <div class="bot-setting-container max-w-[600px] 2xl:max-w-[480px]">
         <FLTitle>基本信息</FLTitle>
         <div class="flex items-center justify-between gap-4 mb-9">
-          <UploadToCropper
+          <UploadToCrop
             :avatar="settingForm.domain.avatar"
             @updateAvatar="(v) => onAvatarUpdate(v)"
-          ></UploadToCropper>
+          ></UploadToCrop>
           <div class="flex-1 -ml-[5px]">
             <HansInputLimit
               v-model:value="settingForm.domain.name"
@@ -170,12 +170,12 @@
 <script setup>
 import { getDomainDetailV2, saveDomainV2 } from '@/api/domain'
 import AIGenerateBtn from '@/components/AIGenerateBtn/index.vue'
-import UploadToCropper from '@/components/ImgChange/UploadToCropper.vue'
 import ImgUpload from '@/components/ImgUpload/index.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import SpaceRightsMask from '@/components/Space/SpaceRightsMask.vue'
 import SwitchWithStateMsg from '@/components/SwitchWithStateMsg/index.vue'
 import FLTitle from '@/components/Title/FLTitle.vue'
+import UploadToCrop from '@/components/UploadToCrop/index.vue'
 import { currentEnvConfig } from '@/config'
 import { DefaultBrandLogo, DefaultBrandName } from '@/constant/brand'
 import { ChatBubbleColorList } from '@/constant/chat'
