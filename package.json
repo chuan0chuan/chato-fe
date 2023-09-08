@@ -46,10 +46,11 @@
     "sa-sdk-javascript": "1.25.12",
     "universal-cookie": "^4.0.4",
     "vue": "^3.2.45",
-    "vue-cropper": "^0.6.2",
+    "vue-advanced-cropper": "^2.8.8",
+    "vue-cropper": "^1.0.9",
     "vue-router": "^4.1.6",
-    "watermark-plus": "^1.6.1",
     "vuedraggable": "^4.1.0",
+    "watermark-plus": "^1.6.1",
     "weixin-js-sdk": "^1.6.0",
     "xss": "^1.0.14"
   },

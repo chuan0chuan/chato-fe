@@ -17,6 +17,8 @@ export const UPLOAD_FILE_TYPES = [
   // '.pptx',
 ]
 
+export const UPLOAD_IMG_TYPES = ['.png', '.jpg', '.jpeg']
+
 export const UPLOAD_TEMPLATE_FILE_TYPES = ['.xls', '.xlsx']
 
 export const USER_ROLES = {

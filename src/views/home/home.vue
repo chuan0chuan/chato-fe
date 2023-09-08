@@ -483,6 +483,11 @@ import { ChatDotRound, VideoPlay } from '@element-plus/icons-vue'
 import { defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 'vue'
 import IndustryCase from './components/IndustryCase.vue'
 
+const form = ref({
+  avatar: '',
+  userName: ''
+})
+
 const emit = defineEmits(['enter'])
 
 const ScheduleCallback = defineAsyncComponent(

@@ -10,10 +10,9 @@
       <div class="bot-setting-container max-w-[600px] 2xl:max-w-[480px]">
         <FLTitle>基本信息</FLTitle>
         <div class="flex items-center justify-between gap-4 mb-9">
-          <ImgUpload
-            :value="settingForm.domain.avatar"
-            @onChange="(v) => onImgChange(v, 'avatar')"
-            v-bind="{ ...uploadConfig, uploadBg: DefaultAvatar }"
+          <UploadToCropper
+            :avatarUrlProp="settingForm.domain.avatar"
+            @updateAvatar="(v) => handleImgChange(v)"
           />
           <div class="flex-1 -ml-[5px]">
             <HansInputLimit
@@ -170,8 +169,8 @@
 
 <script setup>
 import { getDomainDetailV2, saveDomainV2 } from '@/api/domain'
-import DefaultAvatar from '@/assets/img/avatar.png'
 import AIGenerateBtn from '@/components/AIGenerateBtn/index.vue'
+import UploadToCropper from '@/components/ImgChange/UploadToCropper.vue'
 import ImgUpload from '@/components/ImgUpload/index.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import SpaceRightsMask from '@/components/Space/SpaceRightsMask.vue'
@@ -272,6 +271,10 @@ const previewBotInfo = computed(() => {
 const generateWelcomeBtnRef = ref()
 const generateIntroBtnRef = ref()
 
+const handleImgChange = (newAvatarUrl) => {
+  settingForm.domain.avatar = newAvatarUrl
+}
+
 const onImgChange = (value, type = 'avatar' | 'brand_logo') => {
   settingForm.domain[type] = value ? value.url : ''
 }
@@ -321,8 +324,9 @@ const onSave = async () => {
     background: 'rgba(0, 0, 0, 0.7)'
   })
   try {
+    console.dir(settingForm.domain)
     const saveParams = { ...toRaw(settingForm) }
-
+    console.log('After to Raw!!!!!!' + saveParams.domain.avatar)
     if (!saveParams.domain.avatar) {
       saveParams.domain.avatar = DefaultDomainAvatar
     }

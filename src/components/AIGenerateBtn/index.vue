@@ -3,7 +3,7 @@
     plain
     type="primary"
     size="small"
-    :disabled="generating || !internalGenerateStr.length"
+    :disabled="generating || !internalGenerateStr?.length"
     style="
       --el-button-hover-text-color: #7c5cfc;
       --el-button-hover-bg-color: white;

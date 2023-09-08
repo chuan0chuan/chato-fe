@@ -43,7 +43,7 @@
     <div class="float-left input-industy md:w-full" v-if="showUserInput">
       <HansInputLimit
         v-model:value="industyName"
-        placeholder="请填写您的行业"
+        :placeholder="$t('请填写您的行业')"
         limit="30"
         type="text"
         size="default"

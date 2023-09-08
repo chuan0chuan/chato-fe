@@ -6,11 +6,7 @@
           <div class="default-avatar" v-if="!userInfo?.org?.avatar && !isRemove">
             <el-avatar :size="48">空间</el-avatar>
           </div>
-          <div
-            :class="[!userInfo.org.avatar && !isRemove ? 'hidden-img-upload' : 'show-img-upload']"
-          >
-            <ImgUpload v-bind="uploadConfig" :value="avatar" @onChange="handleChange" />
-          </div>
+          <UploadToCropper :value="userInfo.org.avatar" @updateAvatar="(v) => handleChange(v)" />
         </div>
         <span class="mx-4 text-sm" v-if="!isEdit">{{ name }}</span>
         <HansInputLimit
@@ -116,6 +112,7 @@
 <script setup lang="ts">
 import { removeSpaceMember, updateOrgSpaceInfo, updateSpaceMemberRole } from '@/api/space'
 import UserAvatar from '@/components/Avatar/UserAvatar.vue'
+import UploadToCropper from '@/components/ImgChange/UploadToCropper.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import useSpace from '@/composables/useSpace'
 import useSpaceRights from '@/composables/useSpaceRights'
@@ -183,7 +180,7 @@ const handleEdit = () => {
 }
 
 const handleChange = (value: any) => {
-  avatar.value = value.url
+  avatar.value = value
   handleUpdateOrgInfo()
 }
 

@@ -62,7 +62,8 @@ import { useDomainStore } from '@/stores/domain'
 import { ElNotification as Notification } from 'element-plus'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
-import VueCropper from 'vue-cropper/src/vue-cropper.vue'
+import { VueCropper } from 'vue-cropper'
+import 'vue-cropper/dist/index.css'
 
 export interface CropProps {
   aspectRatio: number[] // width/height

@@ -22,11 +22,7 @@
           >
             <el-avatar :size="48" class="bg-[#7C5CFC]">{{ userInfo.nickname[0] }}</el-avatar>
           </div>
-          <div
-            :class="[!settingForm.avatar && !isRemove ? 'hidden-img-upload' : 'show-img-upload']"
-          >
-            <ImgUpload v-bind="uploadConfig" :value="settingForm.avatar" @onChange="handleChange" />
-          </div>
+          <UploadToCropper :value="settingForm.avatar" @updateAvatar="(v) => handleChange(v)" />
         </div>
       </el-form-item>
       <el-form-item label="昵称" prop="nickname">
@@ -54,6 +50,7 @@
 
 <script setup lang="ts">
 import { updateOrgUserInfo } from '@/api/space'
+import UploadToCropper from '@/components/ImgChange/UploadToCropper.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import Topbar from '@/components/Topbar/index.vue'
 import { useBase } from '@/stores/base'
@@ -111,7 +108,7 @@ const handleReplace = () => {
 }
 
 const handleChange = (value: any) => {
-  settingForm.avatar = value.url
+  settingForm.avatar = value
 }
 
 const handleSaveSetting = async (formEl: FormInstance | undefined) => {
