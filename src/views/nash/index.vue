@@ -8,6 +8,7 @@
       <h1 class="font-medium text-[#303133] text-[28px] text-center h-[140px] leading-[140px]">
         {{ $t('云南纳什智能科技有限公司') }}
       </h1>
+      <ChangeAvatar></ChangeAvatar>
       <img :src="ImagePath" class="w-full" />
       <div
         class="mt-16 mb-10 text-6xl text-center font-medium text-[#e4e7ed4d] relative lg:mt-10 lg:mb-6 lg:text-5xl"
@@ -81,11 +82,11 @@
   </div>
 </template>
 <script lang="ts" setup>
+import ChangeAvatar from '@/components/ChangeAvatar/index.vue'
 import useImagePath from '@/composables/useImagePath'
 import { useLocales } from '@/stores/locales'
 import { onMounted } from 'vue'
 import WOW from 'wow.js'
-
 const { ImagePath } = useImagePath('nash')
 const { setLocale } = useLocales()
 

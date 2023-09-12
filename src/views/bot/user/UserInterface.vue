@@ -13,6 +13,7 @@
           <UploadToCrop
             :avatar="settingForm.domain.avatar"
             @updateAvatar="(v) => onAvatarUpdate(v)"
+            :firstCharacter="settingForm.domain.name.charAt[0]"
           ></UploadToCrop>
           <div class="flex-1 -ml-[5px]">
             <HansInputLimit

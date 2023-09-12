@@ -6,7 +6,9 @@
     :show-file-list="false"
     accept=".png, .jpg, .jpeg"
   >
-    <img :src="props.avatar" class="avatar" alt="头像" />
+    <Modal v-model:visible="showCrop" width="50%" mobile-width="100%"> </Modal>
+    <img v-if="!props.bgColor" :src="props.avatar || DefaultAvatar" class="avatar" alt="头像" />
+    <el-avatar v-else>{{ firstCharacter }}</el-avatar>
   </el-upload>
   <Modal
     v-model:visible="showCrop"
@@ -22,6 +24,7 @@
 
 <script setup lang="ts">
 import { uploadImage } from '@/api/file'
+import DefaultAvatar from '@/assets/img/avatar.png'
 import Modal from '@/components/Modal/index.vue'
 import { currentEnvConfig } from '@/config'
 import { UPLOAD_IMG_TYPES } from '@/constant/common'
@@ -32,9 +35,14 @@ import { ref } from 'vue'
 import { CircleStencil, Cropper } from 'vue-advanced-cropper'
 import 'vue-advanced-cropper/dist/style.css'
 
-const emit = defineEmits(['updateAvatar'])
+const emit = defineEmits(['updateAvatar', 'clearBgColor'])
 const props = defineProps({
-  avatar: String
+  avatar: String,
+  bgColor: {
+    type: String,
+    default: null
+  },
+  firstCharacter: String
 })
 
 const baseURL = currentEnvConfig.uploadBaseURL
@@ -79,6 +87,7 @@ const handleCropSubmit = () => {
     }, mimeType)
 
     URL.revokeObjectURL(tempUrl.value)
+    emit('clearBgColor')
     showCrop.value = false
   }
 }

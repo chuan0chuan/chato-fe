@@ -48,13 +48,9 @@
     "sa-sdk-javascript": "1.25.12",
     "universal-cookie": "^4.0.4",
     "vue": "^3.2.45",
-<<<<<<< HEAD
     "vue-advanced-cropper": "^2.8.8",
     "vue-cropper": "^1.0.9",
-=======
-    "vue-cropper": "^0.6.2",
     "vue-i18n": "^9.2.2",
->>>>>>> babefec (feat: i18n (#1))
     "vue-router": "^4.1.6",
     "vuedraggable": "^4.1.0",
     "watermark-plus": "^1.6.1",
