@@ -16,6 +16,7 @@ export default createI18n({
   fallbackLocale: 'zh_cn',
   legacy: false,
   globalInjection: true,
+  missingWarn: false,
   messages: {
     en,
     zh_cn
