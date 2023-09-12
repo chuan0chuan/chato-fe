@@ -120,7 +120,7 @@
               <div class="flex items-center justify-between gap-4 w-full">
                 <UploadToCrop
                   :avatar="settingForm.domain.brand_logo"
-                  @updateAvatar="(v) => onAvatarUpdate(v)"
+                  @updateAvatar="(v) => onLogoUpdate(v)"
                 ></UploadToCrop>
                 <HansInputLimit
                   v-model:value="settingForm.domain.brand_name"
@@ -270,8 +270,8 @@ const onAvatarUpdate = (newAvatarUrl) => {
   settingForm.domain.avatar = newAvatarUrl
 }
 
-const onImgChange = (value, type = 'avatar' | 'brand_logo') => {
-  settingForm.domain[type] = value ? value.url : ''
+const onLogoUpdate = (newLogo) => {
+  settingForm.domain.brand_logo = newLogo
 }
 
 const beforeSaveCheck = () => {
