@@ -22,7 +22,11 @@
           >
             <el-avatar :size="48" class="bg-[#7C5CFC]">{{ userInfo.nickname[0] }}</el-avatar>
           </div>
-          <UploadToCrop :avatar="settingForm.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
+          <UploadToCrop
+            class="avatar-uploader"
+            :avatar="settingForm.avatar"
+            @updateAvatar="(v) => onAvatarUpdate(v)"
+          />
         </div>
       </el-form-item>
       <el-form-item label="昵称" prop="nickname">
@@ -103,6 +107,7 @@ const uploadConfig = {
   itemHeight: 48,
   uploadFillet: true
 }
+//TODO: whether need remove//
 const handleReplace = () => {
   isRemove.value = true
 }
@@ -183,6 +188,23 @@ onUnmounted(() => {
   .show-img-upload {
     opacity: 1;
     height: 100%;
+  }
+}
+
+.avatar-uploader {
+  :deep(.el-upload:hover:after) {
+    content: '';
+    position: absolute;
+    color: #fff;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('@/assets/icons/picture.svg');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 </style>
