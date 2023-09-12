@@ -118,14 +118,10 @@
                 </div>
               </template>
               <div class="flex items-center justify-between gap-4 w-full">
-                <ImgUpload
-                  :value="settingForm.domain.brand_logo"
-                  @onChange="(v) => onImgChange(v, 'brand_logo')"
-                  v-bind="{
-                    ...uploadConfig,
-                    cropProps: { autoAspectRatio: false }
-                  }"
-                />
+                <UploadToCrop
+                  :avatar="settingForm.domain.brand_logo"
+                  @updateAvatar="(v) => onAvatarUpdate(v)"
+                ></UploadToCrop>
                 <HansInputLimit
                   v-model:value="settingForm.domain.brand_name"
                   type="text"
@@ -170,7 +166,6 @@
 <script setup>
 import { getDomainDetailV2, saveDomainV2 } from '@/api/domain'
 import AIGenerateBtn from '@/components/AIGenerateBtn/index.vue'
-import ImgUpload from '@/components/ImgUpload/index.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import SpaceRightsMask from '@/components/Space/SpaceRightsMask.vue'
 import SwitchWithStateMsg from '@/components/SwitchWithStateMsg/index.vue'
