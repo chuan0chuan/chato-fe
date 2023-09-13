@@ -4,6 +4,8 @@
     <UploadToCrop
       :avatar="settingForm.domain.avatar"
       @updateAvatar="(v) => onAvatarUpdate(v)"
+      :colorAvatar="selectedColor"
+      @clearColor="selectedColor = null"
     ></UploadToCrop>
     <div class="main-container">
       <p>头像预览</p>

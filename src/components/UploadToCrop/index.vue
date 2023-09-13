@@ -7,7 +7,7 @@
     accept=".png, .jpg, .jpeg"
   >
     <Modal v-model:visible="showCrop" width="50%" mobile-width="100%"> </Modal>
-    <img v-if="!props.bgColor" :src="props.avatar || DefaultAvatar" class="avatar" alt="头像" />
+    <img v-if="!props.colorAvatar" :src="props.avatar || DefaultAvatar" class="avatar" alt="头像" />
     <el-avatar v-else>{{ firstCharacter }}</el-avatar>
   </el-upload>
   <Modal
@@ -35,10 +35,10 @@ import { ref } from 'vue'
 import { CircleStencil, Cropper } from 'vue-advanced-cropper'
 import 'vue-advanced-cropper/dist/style.css'
 
-const emit = defineEmits(['updateAvatar', 'clearBgColor'])
+const emit = defineEmits(['updateAvatar', 'clearColor'])
 const props = defineProps({
   avatar: String,
-  bgColor: {
+  colorAvatar: {
     type: String,
     default: null
   },
@@ -87,7 +87,7 @@ const handleCropSubmit = () => {
     }, mimeType)
 
     URL.revokeObjectURL(tempUrl.value)
-    emit('clearBgColor')
+    emit('clearColor')
     showCrop.value = false
   }
 }

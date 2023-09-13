@@ -12,7 +12,7 @@
         @click="onEnter()"
         class="font-medium text-center bg-clip-text text-transparent text-[64px] leading-[95px] min-h-[95px] tracking-[8px] lg:text-[32px] lg:leading-[48px] lg:min-h-[48px] lg:tracking-[1px] line-grad-bg"
       >
-        {{ title }}
+        {{ $t(title) }}
       </span>
       <svg-icon svg-class="w-4 h-[75px] lg:w-2 lg:h-9" name="home_play" />
     </div>
@@ -240,7 +240,7 @@
             <svg-icon :name="item.icon" svg-class="w-9 h-9 text-[#7c5cfc] lg:w-7 lg:h-7" />
           </span>
           <p class="text-xl font-medium tracking-[0.04em] text-[#3D3D3D] lg:text-base">
-            {{ item.title }}
+            {{ $t(item.title) }}
           </p>
           <div class="leading-6 text-left text-sm">
             <template v-if="index === 0">
@@ -572,33 +572,33 @@ const ScheduleCallback = defineAsyncComponent(
 )
 
 const list = [
-  t('助理机器人'),
-  t('翻译助理机器人'),
-  t('信息调研机器人'),
-  t('客服助理机器人'),
-  t('销售助理机器人'),
-  t('营销助理机器人'),
-  t('短视频编导机器人'),
-  t('活动策划机器人'),
-  t('设计助理机器人'),
-  t('育儿专家机器人')
+  '助理机器人',
+  '翻译助理机器人',
+  '信息调研机器人',
+  '客服助理机器人',
+  '销售助理机器人',
+  '营销助理机器人',
+  '短视频编导机器人',
+  '活动策划机器人',
+  '设计助理机器人',
+  '育儿专家机器人'
 ]
 
 const serviceCardList = [
   {
-    title: t('企业专属定制'),
+    title: '企业专属定制',
     icon: 'home-customize'
   },
   {
-    title: t('应用场景广泛'),
+    title: '应用场景广泛',
     icon: 'home-application'
   },
   {
-    title: t('使用方便快捷'),
+    title: '使用方便快捷',
     icon: 'home-light'
   },
   {
-    title: t('提供训练服务'),
+    title: '提供训练服务',
     icon: 'home-training'
   }
 ]

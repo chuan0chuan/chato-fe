@@ -28,7 +28,7 @@
             :class="['menu-route', activeMenuRouteName === item?.key && 'active']"
             @click="() => onLinkRoute(item.key)"
           >
-            {{ item.title }}
+            {{ $t(item.title) }}
           </li>
         </ul>
       </div>
@@ -229,7 +229,7 @@ const scrollCallback = useDebounceFn((e) => {
 
 const toggleButton = (langKey) => {
   setLocale(langKey)
-  location.reload()
+  // location.reload()
 }
 
 const { isMobile } = useBasicLayout()
@@ -287,10 +287,10 @@ const handleScrollTop = () => {
 
 const activeMenuRouteName = computed(() => route.name as string)
 const menuRouteList = [
-  { title: t('首页'), key: RoutesMap.home.index },
-  { title: t('客户案例'), key: RoutesMap.home.case },
-  { title: t('联系我们'), key: 'menu_schedule' },
-  { title: t('渠道合作'), key: 'menu_join' }
+  { title: '首页', key: RoutesMap.home.index },
+  { title: '客户案例', key: RoutesMap.home.case },
+  { title: '联系我们', key: 'menu_schedule' },
+  { title: '渠道合作', key: 'menu_join' }
 ]
 
 const onLinkRoute = (key: string) => {
