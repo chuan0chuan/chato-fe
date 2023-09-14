@@ -22,11 +22,20 @@
           >
             <el-avatar :size="48" class="bg-[#7C5CFC]">{{ userInfo.nickname[0] }}</el-avatar>
           </div>
-          <UploadToCrop
+          <!-- <UploadToCrop
             class="avatar-uploader"
             :avatar="settingForm.avatar"
             @updateAvatar="(v) => onAvatarUpdate(v)"
-          />
+          /> -->
+          <div class="my-avatar" @click="onChangeAvatar">
+            <img :src="settingForm.avatar" class="w-full h-full" />
+          </div>
+          <ChangeAvatar
+            v-model:visible="changeAvatarVisible"
+            :firstCharacter="receiveChar"
+            :avatar="settingForm.avatar"
+            @updateAvatar="(v) => onAvatarUpdate(v)"
+          ></ChangeAvatar>
         </div>
       </el-form-item>
       <el-form-item :label="$t(`昵称`)" prop="nickname">
@@ -55,20 +64,22 @@
 import { updateOrgUserInfo } from '@/api/space'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import Topbar from '@/components/Topbar/index.vue'
-import UploadToCrop from '@/components/UploadToCrop/index.vue'
 import { useBase } from '@/stores/base'
 import { getStringWidth } from '@/utils/string'
 import type { FormInstance, FormRules } from 'element-plus'
 import { ElLoading, ElNotification as Notification } from 'element-plus'
 import { storeToRefs } from 'pinia'
-import { onUnmounted, reactive, ref, watch } from 'vue'
+import { computed, onUnmounted, reactive, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const base = useBase()
 const { userInfo } = storeToRefs(base)
 const settingFormRef = ref<FormInstance>()
-
+const changeAvatarVisible = ref(false)
+const onChangeAvatar = () => {
+  changeAvatarVisible.value = true
+}
 const settingForm = reactive<{
   mobile: string
   nickname: string
@@ -116,6 +127,10 @@ const handleReplace = () => {
 const onAvatarUpdate = (value: string) => {
   settingForm.avatar = value
 }
+
+const receiveChar = computed(() => {
+  return settingForm.nickname.charAt(0)
+})
 
 const handleSaveSetting = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
@@ -206,6 +221,44 @@ onUnmounted(() => {
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+.my-avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 1px solid #d9d9d9;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  margin-right: 5px;
+  color: #fff;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    display: none;
+    width: 56px;
+    height: 56px;
+    color: #fff;
+    // opacity: 0.5;
+    object-fit: contain;
+    background-size: 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('@/assets/icons/picture.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-color: #fff;
+    // mask-size: 30px 30px;
+    // mask: url('@/assets/icons/picture.svg') no-repeat;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    &::before {
+      display: block;
+    }
   }
 }
 </style>

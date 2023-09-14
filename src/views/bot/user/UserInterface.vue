@@ -10,11 +10,20 @@
       <div class="bot-setting-container max-w-[600px] 2xl:max-w-[480px]">
         <FLTitle>{{ $t('基本信息') }}</FLTitle>
         <div class="flex items-center justify-between gap-4 mb-9">
-          <UploadToCrop
+          <div class="my-avatar" @click="onChangeAvatar">
+            <img :src="settingForm.domain.avatar" class="w-full h-full" />
+          </div>
+          <!-- <UploadToCrop
             :avatar="settingForm.domain.avatar"
             @updateAvatar="(v) => onAvatarUpdate(v)"
             :firstCharacter="settingForm.domain.name.charAt[0]"
-          ></UploadToCrop>
+          ></UploadToCrop> -->
+          <ChangeAvatar
+            v-model:visible="changeAvatarVisible"
+            :firstCharacter="receiveChar"
+            :avatar="settingForm.domain.avatar"
+            @updateAvatar="(v) => onAvatarUpdate(v)"
+          ></ChangeAvatar>
           <div class="flex-1 -ml-[5px]">
             <HansInputLimit
               v-model:value="settingForm.domain.name"
@@ -125,6 +134,7 @@
               <div class="flex items-center justify-between gap-4 w-full">
                 <UploadToCrop
                   :avatar="settingForm.domain.brand_logo"
+                  isLogo="true"
                   @updateAvatar="(v) => onLogoUpdate(v)"
                 ></UploadToCrop>
                 <HansInputLimit
@@ -170,6 +180,7 @@
 <script setup>
 import { getDomainDetailV2, saveDomainV2 } from '@/api/domain'
 import AIGenerateBtn from '@/components/AIGenerateBtn/index.vue'
+import ChangeAvatar from '@/components/ChangeAvatar/index.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
 import SpaceRightsMask from '@/components/Space/SpaceRightsMask.vue'
 import SwitchWithStateMsg from '@/components/SwitchWithStateMsg/index.vue'
@@ -204,16 +215,19 @@ const loading = ref(null)
 const initing = ref(false)
 const welcomeInputDisabled = ref(false)
 const descInputDisabled = ref(false)
+const changeAvatarVisible = ref(false)
 const svgIconColor = computed(() => {
   const current = ChatBubbleColorList.find((item) => item.bg === settingForm.show.suspend_style)
   return current?.cl || '#fff'
 })
+
 const { domainInfo } = storeToRefs(domainStoreI)
 const { currentRights } = storeToRefs(spaceStoreI)
 const maskVisible = computed(() => !currentRights.value.brand)
 const domainId = computed(() => String(domainInfo.value.id || route.params.botId || 0))
 const slug = computed(() => domainInfo.value.slug)
 const apiUpload = url.join(currentEnvConfig.uploadBaseURL, '/chato/api/file/upload/file')
+
 const uploadConfig = {
   uploadType: 1, // 1: 直接上传; 2: 打开图库上传
   cropProps: {
@@ -271,8 +285,15 @@ const previewBotInfo = computed(() => {
   }
 })
 
-const generateWelcomeBtnRef = ref()
 const generateIntroBtnRef = ref()
+
+const receiveChar = computed(() => {
+  return settingForm.domain.name.charAt(0)
+})
+
+const onChangeAvatar = () => {
+  changeAvatarVisible.value = true
+}
 
 const onAvatarUpdate = (newAvatarUrl) => {
   settingForm.domain.avatar = newAvatarUrl
@@ -331,9 +352,7 @@ const onSave = async () => {
     background: 'rgba(0, 0, 0, 0.7)'
   })
   try {
-    console.dir(settingForm.domain)
     const saveParams = { ...toRaw(settingForm) }
-    console.log('After to Raw!!!!!! blog need to be URL' + saveParams.domain.avatar)
     if (!saveParams.domain.avatar) {
       saveParams.domain.avatar = DefaultDomainAvatar
     }
@@ -390,25 +409,25 @@ watch(
   { immediate: true }
 )
 </script>
-<style>
-.avatar-uploader .el-upload {
-  position: relative;
-  overflow: hidden;
-  border-radius: 100%;
-}
+<style lang="scss">
+// .avatar-uploader .el-upload {
+//   position: relative;
+//   overflow: hidden;
+//   border-radius: 100%;
+// }
 
-.avatar-uploader .el-upload:hover:after {
-  content: '修改';
-  display: flex;
-  position: absolute;
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+// .avatar-uploader .el-upload:hover:after {
+//   content: '修改';
+//   display: flex;
+//   position: absolute;
+//   z-index: 9999;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 100%;
+//   color: #fff;
+//   background-color: rgba(0, 0, 0, 0.5);
+// }
 </style>
 <style lang="scss" scoped>
 .bubble-text {
@@ -467,6 +486,43 @@ watch(
     height: 44px;
     font-size: 24px;
     border-radius: 100%;
+  }
+}
+
+.my-avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 1px solid #d9d9d9;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  margin-right: 5px;
+  color: #fff;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    display: none;
+    width: 56px;
+    height: 56px;
+    color: #fff;
+    // opacity: 0.5;
+    object-fit: contain;
+    // background-color: rgba(0, 0, 0, 0.5);
+    // background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    mask-size: 30px 30px;
+    mask: url('@/assets/icons/picture.svg') no-repeat;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    &::before {
+      display: block;
+    }
   }
 }
 </style>

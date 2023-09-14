@@ -6,7 +6,16 @@
           <div class="default-avatar" v-if="!userInfo?.org?.avatar && !isRemove">
             <el-avatar :size="48">{{ $t('空间') }}</el-avatar>
           </div>
-          <UploadToCrop :avatar="userInfo.org.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" />
+          <!-- <UploadToCrop :avatar="userInfo.org.avatar" @updateAvatar="(v) => onAvatarUpdate(v)" /> -->
+          <div class="my-avatar" @click="onChangeAvatar">
+            <img :src="userInfo.org.avatar" class="w-full h-full" />
+          </div>
+          <ChangeAvatar
+            v-model:visible="changeAvatarVisible"
+            firstCharacter="C"
+            :avatar="userInfo.org.avatar"
+            @updateAvatar="(v) => onAvatarUpdate(v)"
+          ></ChangeAvatar>
         </div>
         <span class="mx-4 text-sm" v-if="!isEdit">{{ name }}</span>
         <HansInputLimit
@@ -116,7 +125,6 @@
 import { removeSpaceMember, updateOrgSpaceInfo, updateSpaceMemberRole } from '@/api/space'
 import UserAvatar from '@/components/Avatar/UserAvatar.vue'
 import HansInputLimit from '@/components/Input/HansInputLimit.vue'
-import UploadToCrop from '@/components/UploadToCrop/index.vue'
 import useSpace from '@/composables/useSpace'
 import useSpaceRights from '@/composables/useSpaceRights'
 import type { ESettingSpaceRole } from '@/enum/space'
@@ -146,6 +154,7 @@ const addMemberVisible = ref<boolean>(false)
 const name = ref(userInfo.value?.org?.name || '')
 const avatar = ref(userInfo.value?.org?.avatar || '')
 const { switchSpace } = useSpace()
+const changeAvatarVisible = ref(false)
 
 const roleList = [
   {
@@ -188,6 +197,14 @@ const onAvatarUpdate = (value: any) => {
   avatar.value = value
   handleUpdateOrgInfo()
 }
+
+const onChangeAvatar = () => {
+  changeAvatarVisible.value = true
+}
+//目前不用监听，按照Chato首字母C填充
+// const receiveChar = computed(() => {
+//   return settingForm.domain.name.charAt(0)
+// })
 
 const blurInput = () => {
   isEdit.value = false
@@ -392,6 +409,43 @@ init()
       height: 5px;
       border-left: 1px solid #fff;
       border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.my-avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 1px solid #d9d9d9;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  margin-right: 5px;
+  color: #fff;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    display: none;
+    width: 56px;
+    height: 56px;
+    color: #fff;
+    // opacity: 0.5;
+    object-fit: contain;
+    // background-color: rgba(0, 0, 0, 0.5);
+    // background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    mask-size: 30px 30px;
+    mask: url('@/assets/icons/picture.svg') no-repeat;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    &::before {
+      display: block;
     }
   }
 }
